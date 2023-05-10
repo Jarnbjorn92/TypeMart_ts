@@ -1,6 +1,7 @@
 import products from "./products";
 
 const productName: String = 'beanie';
+const shippingAddress: String = "Glasgow, Scotland";
 let shipping: number;
 let taxPercent: number;
 let taxTotal: number;
@@ -13,4 +14,12 @@ const product = products.filter((product) =>
 
 if (Boolean(product.preOrder) === true){
     console.log("We will send you a message when your product is on its way.")
+};
+
+if (Number(product.price) > 25){
+    shipping = 0;
+    console.log("Shipping is free for this item");
+}else{
+    shipping = 5;
+    console.log("Shipping is £5")
 };
