@@ -23,3 +23,14 @@ if (Number(product.price) > 25){
     shipping = 5;
     console.log("Shipping is £5")
 };
+
+if (shippingAddress.match('Glasgow')) {
+    taxPercent = 0.1;
+}{
+    taxPercent = 0;
+};
+
+taxTotal = Number(product.price) * taxPercent;
+
+total = Number(product.price) + taxTotal + shipping;
+
